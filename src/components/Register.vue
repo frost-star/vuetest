@@ -3,24 +3,25 @@
     <el-col :span="12" :offset="6">
       <el-form ref="sform" :model="form" label-width="120px" :rules="rules">
         <el-form-item label="Name" prop="name">
-          <el-input v-model="form.name"></el-input>
+          <el-input id="name" v-model="form.name"></el-input>
         </el-form-item>
         <el-form-item label="Age" prop="age">
-          <el-input v-model.number="form.age"></el-input>
+          <el-input id="age" v-model.number="form.age"></el-input>
         </el-form-item>
         <el-form-item label="Password" prop="password">
-          <el-input type="password" v-model="form.password"></el-input>
+          <el-input id="password" type="password" v-model="form.password"></el-input>
         </el-form-item>
         <el-form-item label="PasswordConfirm" prop="passconf">
-          <el-input type="password" v-model="form.passconf"></el-input>
+          <el-input id="passconf" type="password" v-model="form.passconf"></el-input>
         </el-form-item>
         <el-form-item label="Description" prop="desc">
-          <el-input type="textarea" v-model="form.desc"></el-input>
+          <el-input id="desc" type="textarea" v-model="form.desc"></el-input>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary">Sign Up</el-button>
-          <el-button>Cancel</el-button>
+          <el-button id="btn-signup" type="primary" @click="submitForm('sform')">Sign Up</el-button>
         </el-form-item>
+        <el-alert id="result" :title="state" :type="state">
+        </el-alert>
       </el-form>
     </el-col>
   </el-row>
@@ -30,6 +31,7 @@
 export default {
   data() {
     return {
+      state: 'info',
       form: {
         name: '',
         age: '',
@@ -68,6 +70,17 @@ export default {
         ],
       },
     };
+  },
+  methods: {
+    submitForm(formName) {
+      this.$refs[formName].validate((valid) => {
+        if (valid) {
+          this.state = 'success';
+        } else {
+          this.state = 'error';
+        }
+      });
+    },
   },
 };
 </script>
