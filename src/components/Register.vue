@@ -64,7 +64,7 @@ export default {
           },
         ],
         desc: [
-          { max: 100, message: '100文字以内で入力してください' },
+          { max: 10, message: '10文字以内で入力してください' },
         ],
       },
     };
