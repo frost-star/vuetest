@@ -54,9 +54,11 @@ export default {
           { min: 8, message: '8文字以上で入力してください' },
         ],
         passconf: [
-          { required: true, message: '入力必須項目です' },
           {
             validator: (rule, value, callback) => {
+              if (value === '') {
+                return callback(new Error('入力必須項目です'));
+              }
               if (value !== this.form.password) {
                 return callback(new Error('パスワードが一致しません'));
               }
