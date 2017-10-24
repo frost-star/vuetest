@@ -16,14 +16,80 @@ module.exports = {
   //     .assert.elementCount('img', 1)
   //     .end();
   // },
-  'case 1': function test(browser) {
+  'case1': function test(browser) {
     const devServer = browser.globals.devServerURL;
     browser
       .url(devServer)
       .waitForElementVisible('#app', 5000)
-      .setCsvValue('test/e2e/decision_table.csv', 'case1')
+      .setCsvValue('test/e2e/decision_table.csv', browser.currentTest.name)
       .click('#btn-signup')
       .assert.containsText('#result span', 'success')
+      .saveScreenshot('./ss/' + browser.currentTest.name + '.png')
+      .end();
+  },
+  'case2': function test(browser) {
+    const devServer = browser.globals.devServerURL;
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .setCsvValue('test/e2e/decision_table.csv', browser.currentTest.name)
+      .click('#btn-signup')
+      .assert.containsText('#result span', 'success')
+      .saveScreenshot('./ss/' + browser.currentTest.name + '.png')
+      .end();
+  },
+  'case3': function test(browser) {
+    const devServer = browser.globals.devServerURL;
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .setCsvValue('test/e2e/decision_table.csv', browser.currentTest.name)
+      .click('#btn-signup')
+      .assert.containsText('#result span', 'error')
+      .saveScreenshot('./ss/' + browser.currentTest.name + '.png')
+      .end();
+  },
+  'case4': function test(browser) {
+    const devServer = browser.globals.devServerURL;
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .setCsvValue('test/e2e/decision_table.csv', browser.currentTest.name)
+      .click('#btn-signup')
+      .assert.containsText('#result span', 'error')
+      .saveScreenshot('./ss/' + browser.currentTest.name + '.png')
+      .end();
+  },
+  'case5': function test(browser) {
+    const devServer = browser.globals.devServerURL;
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .setCsvValue('test/e2e/decision_table.csv', browser.currentTest.name)
+      .click('#btn-signup')
+      .assert.containsText('#result span', 'error')
+      .saveScreenshot('./ss/' + browser.currentTest.name + '.png')
+      .end();
+  },
+  'case6': function test(browser) {
+    const devServer = browser.globals.devServerURL;
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .setCsvValue('test/e2e/decision_table.csv', browser.currentTest.name)
+      .click('#btn-signup')
+      .assert.containsText('#result span', 'error')
+      .saveScreenshot('./ss/' + browser.currentTest.name + '.png')
+      .end();
+  },
+  'case7': function test(browser) {
+    const devServer = browser.globals.devServerURL;
+    browser
+      .url(devServer)
+      .waitForElementVisible('#app', 5000)
+      .setCsvValue('test/e2e/decision_table.csv', browser.currentTest.name)
+      .click('#btn-signup')
+      .assert.containsText('#result span', 'error')
       .saveScreenshot('./ss/' + browser.currentTest.name + '.png')
       .end();
   },
