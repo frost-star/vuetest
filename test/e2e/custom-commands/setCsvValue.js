@@ -16,16 +16,6 @@ exports.command = function(filePath, caseName, callback) {
     throw 'Unable to open file: ' + filePath;
   }
 
-  // csv = csv.map((row, index, csv) => {
-  //   let result = Object.assign({}, row);
-  //   if (row[selectorColumn] === '') {
-  //     result[selectorColumn] = this.selector;
-  //   } else {
-  //     this.selector = row[selectorColumn];
-  //   }
-  //   return result;
-  // }, {selector: ''});
-
   let testData = {};
   csv.forEach((row, index, csv) => {
     if (row[selectorColumn] !== '') {
