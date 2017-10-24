@@ -6,8 +6,8 @@ exports.command = function(filePath, caseName, callback) {
   const valueColumn = 'value';
   const enableMark = '〇';
 
+  // csv読み込み
   let csv;
-
   try {
     let stream = fs.readFileSync(filePath);
     csv = csvPerser(stream, {columns: true});
@@ -16,6 +16,7 @@ exports.command = function(filePath, caseName, callback) {
     throw 'Unable to open file: ' + filePath;
   }
 
+  // テストデータの整形
   let testData = {};
   csv.forEach((row, index, csv) => {
     if (row[selectorColumn] !== '') {
@@ -25,6 +26,8 @@ exports.command = function(filePath, caseName, callback) {
       testData[this.selector] = row[valueColumn];
     }
   }, {selector: ''});
+
+  // 値の設定
   Object.keys(testData).forEach((key) => {
     this.setValue(key, testData[key]);
   });
