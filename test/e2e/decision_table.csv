@@ -1,25 +1,5 @@
 item,selector,description,value,case1,case2,case3,case4,case5,case6,case7
-"Name
-
-
-
-
-Age
-
-
-
-
-
-
-Password
-
-
-PasswordConfirm
-
-
-Description
-
-",#name input,12文字,abcdefghijkl,〇,,,,,〇,〇
+Name,#name input,12文字,abcdefghijkl,〇,,,,,〇,〇
 ,,3文字,abc,,〇,,,,,
 ,,13文字以上,abcdefghijklm,,,〇,,,,
 ,,2文字以下,ab,,,,〇,,,
