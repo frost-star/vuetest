@@ -2,6 +2,7 @@ const fs = require('fs');
 const csvPerser = require('csv-parse/lib/sync');
 
 exports.command = function(filePath, caseName, callback) {
+  // 列名の設定
   const selectorColumn = 'selector';
   const valueColumn = 'value';
   const enableMark = '〇';
