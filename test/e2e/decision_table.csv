@@ -1,22 +1,42 @@
-selector,description,value,case1,case2,case3,case4,case5,case6,case7
-#name input,12文字,abcdefghijkl,〇,,,,,〇,〇
-,3文字,abc,,〇,,,,,
-,13文字以上,abcdefghijklm,,,〇,,,,
-,2文字以下,ab,,,,〇,,,
-,空,,,,,,〇,,
-#age input,100,100,〇,,,,,,
-,1,1,,〇,,,,,
-,101以上,101,,,〇,,,,
-,0,0,,,,〇,,,
-,負,-1,,,,,〇,,
-,文字,a,,,,,,〇,
-,空,,,,,,,,〇
-#password input,8文字,abcdefgh,〇,〇,,,〇,〇,〇
-,7文字以下,abcdefg,,,〇,,,,
-,空,,,,,〇,,,
-#passconf input,一致,abcdefgh,〇,〇,,,〇,〇,〇
-,不一致,hgfedcba,,,〇,,,,
-,空,,,,,〇,,,
-#desc textarea,10文字,abcdefghij,〇,,,〇,〇,〇,〇
-,空,,,〇,,,,,
-,11文字,abcdefghijk,,,〇,,,,
+item,selector,description,value,case1,case2,case3,case4,case5,case6,case7
+"Name
+
+
+
+
+Age
+
+
+
+
+
+
+Password
+
+
+PasswordConfirm
+
+
+Description
+
+",#name input,12文字,abcdefghijkl,〇,,,,,〇,〇
+,,3文字,abc,,〇,,,,,
+,,13文字以上,abcdefghijklm,,,〇,,,,
+,,2文字以下,ab,,,,〇,,,
+,,空,,,,,,〇,,
+Age,#age input,100,100,〇,,,,,,
+,,1,1,,〇,,,,,
+,,101以上,101,,,〇,,,,
+,,0,0,,,,〇,,,
+,,負,-1,,,,,〇,,
+,,文字,a,,,,,,〇,
+,,空,,,,,,,,〇
+Password,#password input,8文字,abcdefgh,〇,〇,,,〇,〇,〇
+,,7文字以下,abcdefg,,,〇,,,,
+,,空,,,,,〇,,,
+PasswordConfirm,#passconf input,一致,abcdefgh,〇,〇,,,〇,〇,〇
+,,不一致,hgfedcba,,,〇,,,,
+,,空,,,,,〇,,,
+,#desc textarea,10文字,abcdefghij,〇,,,〇,〇,〇,〇
+,,空,,,〇,,,,,
+,,11文字,abcdefghijk,,,〇,,,,
