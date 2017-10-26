@@ -17,6 +17,6 @@ Password,#password input,8文字,abcdefgh,〇,〇,,,〇,〇,〇
 PasswordConfirm,#passconf input,一致,abcdefgh,〇,〇,,,〇,〇,〇
 ,,不一致,hgfedcba,,,〇,,,,
 ,,空,,,,,〇,,,
-,#desc textarea,10文字,abcdefghij,〇,,,〇,〇,〇,〇
+Description,#desc textarea,10文字,abcdefghij,〇,,,〇,〇,〇,〇
 ,,空,,,〇,,,,,
 ,,11文字,abcdefghijk,,,〇,,,,
